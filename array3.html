@@ -11,22 +11,23 @@
 <body>
     <h1>Array operatoren</h1>
     <h2>Optellen van de twee arrays zijn:</h2>
+    <div id="optellen"></div>
 
     <script>
         var arrayEen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         var arrayTwee = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 
-        for (let i = 0; i < 10; i++) {
-            let copyArrayEen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            let copyArrayTwee = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-
-            let optelVar = copyArrayEen[i] += copyArrayTwee[i];
-            var optelElement = document.createElement("h2");
-            var optelElementText = document.createTextNode(` ${arrayEen[i]} + ${arrayTwee[i]} = ${optelVar}`);
+        // Optellen //
+        for (let i = 0; i < arrayEen.length; i++) {
+            let optelElement = document.createElement("p");
+            let optelElementText = document.createTextNode(` ${arrayEen[i]} + ${arrayTwee[i]} = ${arrayEen[i] + arrayTwee[i]}`);
             optelElement.appendChild(optelElementText);
-            document.body.appendChild(optelElement);
+            document.getElementById('optellen').appendChild(optelElement);
 
         }
+
+
+
     </script>
 </body>
 
