@@ -16,15 +16,21 @@
     <script>
         var arrayEen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         var arrayTwee = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+        var arrayDrie = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33];
 
         // Optellen //
-        for (let i = 0; i < arrayEen.length; i++) {
-            let optelElement = document.createElement("p");
-            let optelElementText = document.createTextNode(` ${arrayEen[i]} + ${arrayTwee[i]} = ${arrayEen[i] + arrayTwee[i]}`);
-            optelElement.appendChild(optelElementText);
-            document.getElementById('optellen').appendChild(optelElement);
+        function optellen(para1, para2) {
+            for (let i = 0; i < para1.length; i++) {
+                let optelElement = document.createElement("p");
+                let optelElementText = document.createTextNode(` ${para1[i]} + ${para2[i]} = ${para1[i] + para2[i]}`);
+                optelElement.appendChild(optelElementText);
+                document.getElementById('optellen').appendChild(optelElement);
 
+            }
         }
+
+        optellen(arrayEen, arrayTwee)
+
 
 
 
