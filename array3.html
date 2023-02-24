@@ -16,6 +16,8 @@
     <div id="aftrekken"></div>
     <h2>Vermenigvuldigen van de twee arrays zijn:</h2>
     <div id="vermenigvuldigen"></div>
+    <h2>Delen van de twee arrays zijn:</h2>
+    <div id="delen"></div>
 
     <script>
         var arrayEen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -63,6 +65,19 @@
 
         Vermenigvuldigen(arrayEen, arrayTwee)
 
+
+        // Delen //
+        function Delen(para1, para2) {
+            for (let i = 0; i < para1.length; i++) {
+                let optelElement = document.createElement("p");
+                let optelElementText = document.createTextNode(` ${para2[i]} / ${para1[i]} = ${para2[i] / para1[i]}`);
+                optelElement.appendChild(optelElementText);
+                document.getElementById("delen").appendChild(optelElement);
+
+            }
+        }
+
+        Delen(arrayEen, arrayTwee)
 
 
     </script>
